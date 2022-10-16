@@ -5,5 +5,14 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "calendars"
+path = "src/lib.rs"
+
+[[bin]]
+name = "calendars"
+path = "src/main.rs"
+
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
+time = { version = "0.3.15", features = ["macros"]}
