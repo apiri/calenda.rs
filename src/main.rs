@@ -42,7 +42,7 @@ fn main() -> Result<(), ()> {
                 );
                 if previous.is_some() {
                     println!("Duration since previous is {:?} minutes", {
-                        entry.start().sub(*previous.unwrap().end()).whole_minutes()
+                        entry.start().sub(previous.unwrap().end()).whole_minutes()
                     })
                 }
                 previous = Some(entry)
